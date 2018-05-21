@@ -10,9 +10,9 @@ Game.prototype.init = function(){
 
 Game.prototype.start = function(){
 
-    this.init();
+    PoolGame.init();
 
-    this.mainLoop();
+    PoolGame.mainLoop();
 }
 
 Game.prototype.mainLoop = function(){
@@ -20,6 +20,7 @@ Game.prototype.mainLoop = function(){
     Canvas.clear();
     PoolGame.gameWorld.update();
     PoolGame.gameWorld.draw();
+    Mouse.reset();
 
     requestAnimationFrame(PoolGame.mainLoop);
 
